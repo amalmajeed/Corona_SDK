@@ -15,4 +15,8 @@ luaLogo=display.newImage( "index.png",250,600)
 group1:insert(greyBox)
 group1:insert(luaLogo)
 
+--TEXT--
+text=display.newText( group1,"AMAL MAJEED",200,900)  -- YOU CAN ALSO INSERT ELEMENTS TO A GROUP BY SPECIFYING THE PARENT GROUP NAME IN THE ELEMENT PARAMETER
+text:scale(2,2)
+
 group1.x=500
