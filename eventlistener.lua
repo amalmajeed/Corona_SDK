@@ -8,7 +8,7 @@ Rectangle=display.newRect( group1,200,200,200,200 )
 --WE ARE MAKING THE IMAGE DRAGGABLE--
 function imageTouch(event)
 	if event.phase=="began" then      --A New Touch Event Has Begun
-		display.getCurrentStage( ):setFocus(event.target)	--[[Sets focus on image triggere first so overlapping images
+		display.getCurrentStage( ):setFocus(event.target)	--[[Sets focus on image triggered first so overlapping images
 										arent dragged togother]]
 	end
 	if event.phase=="moved" then      --A New Touch Event Has Begun
@@ -16,7 +16,7 @@ function imageTouch(event)
 		event.target.y=event.y
 	end
 	if event.phase=="ended" then
-		display.getCurrentStage( ):setFocus(nil)
+		display.getCurrentStage( ):setFocus(nil) --removes focus out of triggered display object
 	end
 end
 Image1:addEventListener( "touch",imageTouch )
